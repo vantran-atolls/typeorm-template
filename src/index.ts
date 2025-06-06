@@ -6,12 +6,12 @@ import { User } from "./user";
 (async () => {
   const dataSource = new DataSource({
     type: "better-sqlite3",
-    database: "./data.db",
+    database: "./dist/data.db",
     synchronize: true,
     entities: [User],
   });
 
   await dataSource.initialize();
 
-  console.log("All good");
+  console.log("All good!");
 })();
