@@ -1,6 +1,8 @@
 {
   "include": ["src/**/*"],
   "compilerOptions": {
+    "target": "esnext",
+    "module": "nodenext",
     "outDir": "dist",
     "lib": ["ESNext"],
     "emitDecoratorMetadata": true,
