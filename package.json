@@ -1,17 +1,19 @@
 {
   "dependencies": {
     "better-sqlite3": "^11.10.0",
-    "tsx": "^4.19.4",
-    "typeorm": "^0.3.24",
-    "typescript": "^5.8.3"
+    "typeorm": "^0.3.24"
   },
   "name": "test-orm",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "typescript": "^5.8.3"
+  },
   "scripts": {
-    "start": "tsx ./src/index.ts",
-    "watch": "tsx --watch ./src/index.ts"
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "cd dist && node index.js"
   },
   "keywords": [],
   "author": "",
